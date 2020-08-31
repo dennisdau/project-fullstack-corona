@@ -1,3 +1,4 @@
-com/example/restservice/RestServiceApplication.class
 com/example/restservice/RegulationController.class
 com/example/restservice/Regulation.class
+com/example/restservice/RestServiceApplication.class
+com/example/restservice/EbuildingTypes.class

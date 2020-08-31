@@ -9,13 +9,13 @@ public class Regulation {
     public final int maxHouseholdsClosedrooms;
     public final int maxHouseholdsOutside;
     public final boolean maskDuty;
-    public final String closedBuildingtypes;
+    public final EbuildingTypes closedBuildingtypes;
     public final double maxPersonsPerSquareMeterClosedRooms;
     public final double maxPersonsPerSquareMeterOutside;
     public final String otherRegulations;
 
 
-    public Regulation(long id, String state, int maxPersonsClosedRooms, int maxPersonsOutside, int maxHouseholdsClosedrooms, int maxHouseholdsOutside, boolean maskDuty, String closedBuildingtypes, double maxPersonsPerSquareMeterClosedRooms, double maxPersonsPerSquareMeterOutside, String otherRegulations) {
+    public Regulation(long id, String state, int maxPersonsClosedRooms, int maxPersonsOutside, int maxHouseholdsClosedrooms, int maxHouseholdsOutside, boolean maskDuty, EbuildingTypes closedBuildingtypes, double maxPersonsPerSquareMeterClosedRooms, double maxPersonsPerSquareMeterOutside, String otherRegulations) {
         this.id = id;
         this.state = state;
         this.maxPersonsClosedRooms = maxPersonsClosedRooms;
@@ -63,7 +63,7 @@ public class Regulation {
         return this.maskDuty;
     }
 
-    public String getClosedBuildingtypes() {
+    public EbuildingTypes getClosedBuildingtypes() {
         return this.closedBuildingtypes;
     }
 

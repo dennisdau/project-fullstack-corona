@@ -4,6 +4,7 @@ import java.util.concurrent.atomic.AtomicLong;
 import java.util.Arrays;
 import java.util.*;
 import java.util.stream.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -34,13 +35,14 @@ public class RegulationController {
 		new Regulation(counter.incrementAndGet(),  "Thüringen", 10, 20, 5, 8, false, EbuildingTypes.BÜRO, 0.3, 0.1, "none")
 	);
 	
-
+	@CrossOrigin 
 	@GetMapping("/regulation")
 	public List<Regulation> regulation() {
 		return regulationList;
-    }
-    
-    @GetMapping("/regulation1")
+	}
+	
+    @CrossOrigin 
+    @GetMapping("/regulationByState")
 	public List<Regulation> regulationPerState(@RequestParam(value = "stateName") String stateName) {
 	
 
